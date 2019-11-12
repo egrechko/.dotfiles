@@ -1,0 +1,17 @@
+# Alias file for both Bash & ZSH
+
+# use Windows Vagrant for Trellis
+alias vagrant="vagrant.exe"
+
+# Vim to Neovim
+alias vi="nvim"
+alias vim="nvim"
+
+# ls aliases
+alias ls="exa --header -l"
+alias l="exa --header -l"
+alias ll="exa --header -l"
+alias la="exa --header -la"
+
+# dotfiles git config
+#alias dgit="/usr/bin/git --git-dir=$HOME/.dotfiles/.git --work-tree=$HOME"

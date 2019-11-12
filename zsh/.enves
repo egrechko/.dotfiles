@@ -1,0 +1,31 @@
+# Enviroment Variable file
+
+# Set DISPLAY for Windows X Server
+export DISPLAY=localhost:0
+
+# Set Default Editor
+export EDITOR='vim'
+
+# Set language
+export LANG=en_US.UTF-8
+
+##################
+# PATH Variables #
+##################
+
+# Global Yarn Packages
+if [ -d $(yarn global bin) ]; then
+    export PATH="$(yarn global bin):$PATH"
+fi
+
+# Global Pip Packages
+if [ -d $HOME/.local/bin ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Add nvm to path
+if [ -d $HOME/.nvm ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
