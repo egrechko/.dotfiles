@@ -12,6 +12,3 @@ alias ls="exa --header -l"
 alias l="exa --header -l"
 alias ll="exa --header -l"
 alias la="exa --header -la"
-
-# dotfiles git config
-#alias dgit="/usr/bin/git --git-dir=$HOME/.dotfiles/.git --work-tree=$HOME"
