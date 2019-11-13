@@ -12,3 +12,6 @@ alias ls="exa --header -l"
 alias l="exa --header -l"
 alias ll="exa --header -l"
 alias la="exa --header -la"
+
+# Reload ZSH config
+alias reload="source $HOME/.zshrc"
