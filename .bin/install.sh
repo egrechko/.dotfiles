@@ -43,3 +43,8 @@ else
 	sudo apt install uuid-runtime -y >/dev/null 2>&1
 	echo 'Installed: uuid-runtime.'
 fi
+
+# Install tmux plugin manager
+if ! [ -d $HOME/.tmux/plugins/tpm ]; then
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi

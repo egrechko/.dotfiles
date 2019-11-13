@@ -29,6 +29,7 @@ set clipboard+=unnamedplus
 set nocompatible
 filetype off
 filetype plugin indent on
+set nu rnu
 
 " Working with Splits
 set splitbelow
