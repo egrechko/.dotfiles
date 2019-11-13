@@ -2,9 +2,11 @@
 
 # This install script will install of my required software.
 
-echo 'Updating System...'
-sudo apt update >/dev/null 2>&1 && sudo apt upgrade -y >/dev/null 2>&1
-echo 'System Updated.'
+echo 'Running apt update...'
+sudo apt update >/dev/null 2>&1
+echo 'Running apt upgrade...'
+sudo apt upgrade -y
+echo 'System updated.'
 
 # Check if stow is installed
 if command -v stow >/dev/null 2>&1; then
@@ -14,6 +16,9 @@ else
 	sudo apt install stow -y >/dev/null 2>&1
 	echo 'Finished: Installing stow'
 fi
+
+echo 'Installing misc programs'
+sudo apt install -y neofetch lolcat
 
 # Install patched powerline font
 if [ -f /usr/share/fonts/opentype/PowerlineSymbols.otf ] && [ -f /etc/fonts/conf.avail/10-powerline-symbols.conf ]; then
