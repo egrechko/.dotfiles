@@ -65,6 +65,3 @@ fi
 if [ -r $HOME/.enves ]; then
     source $HOME/.enves
 fi
-
-# Run Neofetch
-neofetch
