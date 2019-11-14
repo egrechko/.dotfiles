@@ -15,3 +15,9 @@ alias la="exa --header -la"
 
 # Reload ZSH config
 alias reload="source $HOME/.zshrc"
+
+# Github Aliases
+alias gs="git status"
+alias gaa="git add ."
+alias gc="git commit"
+alias gcm="git commit -m"
