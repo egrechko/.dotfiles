@@ -18,7 +18,7 @@ else
 fi
 
 echo 'Installing misc programs'
-sudo apt install -y neofetch lolcat
+sudo apt install -y neofetch
 
 # Install patched powerline font
 if [ -f /usr/share/fonts/opentype/PowerlineSymbols.otf ] && [ -f /etc/fonts/conf.avail/10-powerline-symbols.conf ]; then
@@ -53,3 +53,13 @@ fi
 if ! [ -d $HOME/.tmux/plugins/tpm ]; then
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
+
+# Install NerdFonts
+#if ! [ -d $HOME/.local/share/fonts/NerdFonts ]; then
+#	echo 'Installing NerdFonts...'
+#	mkdir -p $HOME/.local/share/fonts/NerdFonts
+#	cd $HOME/.local/share/fonts/NerdFonts
+#	wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
+#else
+#	echo 'Skipping: NerdFonts already installed.'
+#fi
