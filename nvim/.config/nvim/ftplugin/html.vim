@@ -1,3 +1,7 @@
+" Colorscheme
+setlocal background=dark
+colorscheme gruvbox
+
 "augroup EmmetSettings
 "  autocmd! FileType html imap <tab> <plug>(emmet-expand-abbr)
 "augroup ENDet g:user_emmet_expandabbr_key='<Tab>'

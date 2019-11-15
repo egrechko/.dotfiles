@@ -1,3 +1,6 @@
+" Colorscheme
+setlocal background=dark
+colorscheme gruvbox
 
 " Emmet Settings
 "EmmetInstall

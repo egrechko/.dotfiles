@@ -29,7 +29,18 @@ else
 	echo 'Finished: Installing Patched Powerline Fonts'
 fi
 
-# Install neovim
+# Install neovim v0.4.3
+sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+cd $HOME
+mkdir $HOME/temp
+cd temp
+wget https://github.com/neovim/neovim/archive/v0.4.3.zip
+unzip v0.4.3.zip
+cd neovim-0.4.3
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+cd $HOME
+rm -rf $HOME/temp
 
 # Install Gogh (gnome-terminal theme) dependencies
 # Gogh github https://github.com/Mayccoll/Gogh

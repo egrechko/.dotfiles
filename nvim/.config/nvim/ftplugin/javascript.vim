@@ -1,3 +1,7 @@
+" Colorscheme
+setlocal background=dark
+colorscheme gruvbox
+
 " Setting for Indenting Files
 setlocal autoindent
 setlocal smartindent

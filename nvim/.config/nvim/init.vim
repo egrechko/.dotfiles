@@ -1,14 +1,14 @@
 """ Plugins
 call plug#begin()
 
-" Install Gruvbox color scheme
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot' " Syntax Highlighting for over 120 languages
-Plug 'morhetz/gruvbox'
-Plug 'reedes/vim-colors-pencil'
+Plug 'morhetz/gruvbox' " colorscheme
+Plug 'reedes/vim-colors-pencil' " For markdown writing
 Plug 'w0rp/ale' " Lint for Javascript
 Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree' " file manager
 Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
@@ -16,7 +16,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'reedes/vim-pencil'
 Plug 'junegunn/goyo.vim'
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons' " Icons in nerdtree
 
 call plug#end()
 
@@ -66,12 +66,14 @@ let g:ctrlp_switch_buffer = 'et'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
+"  \ 'file': '\v\.(exe|so|dll)$',
+"  \ 'link': 'some_bad_symbolic_links',
+"  \ }
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " exclude files in .gitignore
 
