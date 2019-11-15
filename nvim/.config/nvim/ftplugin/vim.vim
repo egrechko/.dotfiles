@@ -4,10 +4,11 @@ colorscheme gruvbox
 
 " Setting for Indenting Files
 setlocal autoindent
-setlocal smartindent
-setlocal tabstop=2
-setlocal shiftwidth=2
-setlocal expandtab
+"setlocal smartindent " Disabled this because I don't want vim automatically
+"changing indent width
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal noexpandtab
 
 " Settings for line numbers and max line width
 setlocal nu rnu
@@ -21,3 +22,10 @@ setlocal hlsearch
 setlocal incsearch
 setlocal ignorecase
 setlocal smartcase
+
+"Enable code folding
+setlocal foldmethod=indent
+setlocal foldlevel=99
+setlocal nofoldenable
+" enable folding with the spacebar
+noremap <space> za

@@ -10,7 +10,3 @@ setlocal shiftwidth=2
 setlocal expandtab
 
 setlocal wrap
-
-"EmmetInstall
-"imap <tab> <plug>(emmet-expand-abbr)
-"let g:user_emmet_expandabbr_key='<Tab>'

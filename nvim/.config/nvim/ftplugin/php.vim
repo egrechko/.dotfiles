@@ -6,7 +6,7 @@ colorscheme gruvbox
 "EmmetInstall
 "imap <tab> <plug>(emmet-expand-abbr)
 "let g:user_emmet_expandabbr_key='<tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Setting for Indenting Files
 setlocal autoindent
