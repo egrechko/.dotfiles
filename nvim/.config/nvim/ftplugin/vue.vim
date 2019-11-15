@@ -1,12 +1,12 @@
 " Colorscheme
-setlocal background=dark
-colorscheme gruvbox
+setlocal background=light
+colorscheme pencil
 
 " Tab settings
 setlocal autoindent
 "setlocal smartindent
-setlocal tabstop=2
-setlocal shiftwidth=2
+setlocal tabstop=4
+setlocal shiftwidth=4
 setlocal noexpandtab
 
 setlocal wrap

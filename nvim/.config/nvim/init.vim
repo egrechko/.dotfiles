@@ -6,7 +6,6 @@
 	Plug 'morhetz/gruvbox' " colorscheme
 	Plug 'reedes/vim-colors-pencil' " For markdown writing
 	Plug 'w0rp/ale' " Lint for Javascript
-	"Plug 'mattn/emmet-vim'
 	Plug 'scrooloose/nerdtree' " file manager
 	Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 	Plug 'tpope/vim-fugitive'
@@ -25,9 +24,12 @@ set encoding=UTF-8
 " Setting System Clipboard
 set clipboard+=unnamedplus
 
-set nocompatible
-filetype off
-filetype plugin indent on
+"set nocompatible
+"filetype on
+"filetype plugin indent on
+" testing...
+autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
+filetype plugin on
 
 " Working with Splits
 	set splitbelow
@@ -63,3 +65,6 @@ set belloff=all
 	let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 	
 	let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " exclude files in .gitignore
+
+
+autocmd FileType markdown :echo "Hello!"
