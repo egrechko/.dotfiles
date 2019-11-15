@@ -29,11 +29,10 @@ else
 	echo 'Finished: Installing Patched Powerline Fonts'
 fi
 
-# Install neovim v0.4.3
+# Install neovim v0.4.3 from source
 sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
-cd $HOME
 mkdir $HOME/temp
-cd temp
+cd $HOME/temp
 wget https://github.com/neovim/neovim/archive/v0.4.3.zip
 unzip v0.4.3.zip
 cd neovim-0.4.3
@@ -66,11 +65,3 @@ if ! [ -d $HOME/.tmux/plugins/tpm ]; then
 fi
 
 # Install NerdFonts
-#if ! [ -d $HOME/.local/share/fonts/NerdFonts ]; then
-#	echo 'Installing NerdFonts...'
-#	mkdir -p $HOME/.local/share/fonts/NerdFonts
-#	cd $HOME/.local/share/fonts/NerdFonts
-#	wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
-#else
-#	echo 'Skipping: NerdFonts already installed.'
-#fi
