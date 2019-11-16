@@ -15,6 +15,7 @@
 	Plug 'reedes/vim-pencil'
 	Plug 'junegunn/goyo.vim'
 	Plug 'ryanoasis/vim-devicons' " Icons in nerdtree
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	
 	call plug#end()
 
@@ -65,6 +66,3 @@ set belloff=all
 	let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 	
 	let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " exclude files in .gitignore
-
-
-autocmd FileType markdown :echo "Hello!"
