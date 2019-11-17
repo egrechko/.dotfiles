@@ -10,6 +10,7 @@ setlocal shiftwidth=4
 setlocal noexpandtab
 
 setlocal wrap
+setlocal nu rnu
 
 "let b:ale_linters = ['eslint']
 let b:ale_linter_aliases = ['css', 'javascript', 'vls']
