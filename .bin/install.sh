@@ -66,3 +66,28 @@ if ! [ -d $HOME/.tmux/plugins/tpm ]; then
 fi
 
 # Install NerdFonts
+
+# Give instructions for manual install steps
+echo ''
+echo ''
+echo 'System Setup finished. If this is the first time running the install script you will have to install a few things manually.'
+echo ''
+echo ''
+echo '1. Open vim and install Coc extensions.'
+echo ''
+echo ':CocInstall coc-json coc-html coc-css coc-tsserver coc-vetur coc-yaml coc-emmet'
+echo ''
+echo ''
+echo '2. Install NerdFonts for vim devicons'
+echo ''
+echo 'git clone https://github.com/ryanoasis/nerd-fonts'
+echo 'cd nerd-fonts ... ./install.sh Hack'
+echo ''
+echo ''
+echo '3. Install Gogh color theme for gnome terminal'
+echo ''
+echo 'run this command. Choose gruvbox. '
+echo 'bash -c  "$(wget -qO- https://git.io/vQgMr)"'
+echo ''
+
+# Finished. This script is still a work in progress like my dotfiles. 
