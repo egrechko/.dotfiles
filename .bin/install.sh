@@ -43,6 +43,7 @@ rm -rf $HOME/temp
 
 # Install Gogh (gnome-terminal theme) dependencies
 # Gogh github https://github.com/Mayccoll/Gogh
+# Gruvbox Dark = option 58
 if dpkg -s dconf-cli >/dev/null 2>&1; then
 	echo 'Skipping: dconf-cli is already installed.'
 else
