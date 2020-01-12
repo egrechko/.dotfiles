@@ -10,7 +10,7 @@ You will need to use stow to automatically link all of your configs into the cor
 
 ## Vim Todo
 
-- [ ] Setup development for .vue files
-- [ ] Setup Ale
+- [x] Setup development for .vue files
 - [ ] Setup coc code completion
-- [ ] Setup emmet
+- [ ] Setup coc pairs
+- [ ] Setup coc for prettify and eslint
