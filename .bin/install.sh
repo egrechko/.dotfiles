@@ -9,7 +9,7 @@ sudo apt upgrade -y
 echo 'System updated.'
 
 echo 'Installing programs'
-sudo apt install -y zsh curl software-properties-common apt-transport-https wget ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip stow uuid-runtime dconf-cli tmux
+sudo apt install -y zsh curl software-properties-common apt-transport-https wget ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip stow uuid-runtime dconf-cli tmux htop
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install patched powerline font
