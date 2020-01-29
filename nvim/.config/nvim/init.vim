@@ -5,17 +5,17 @@
 	Plug 'sheerun/vim-polyglot' " Syntax Highlighting for over 120 languages
 	Plug 'morhetz/gruvbox' " colorscheme
 	Plug 'reedes/vim-colors-pencil' " For markdown writing
-	Plug 'w0rp/ale' " Lint for Javascript
+	"Plug 'w0rp/ale' " Lint for Javascript
 	Plug 'scrooloose/nerdtree' " file manager
 	Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
-	Plug 'tpope/vim-fugitive'
-	Plug 'jiangmiao/auto-pairs'
+	"Plug 'tpope/vim-fugitive'
+	"Plug 'jiangmiao/auto-pairs'
 	Plug 'godlygeek/tabular'
 	Plug 'plasticboy/vim-markdown'
 	Plug 'reedes/vim-pencil'
 	Plug 'junegunn/goyo.vim'
 	Plug 'ryanoasis/vim-devicons' " Icons in nerdtree
-	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+	"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	
 	call plug#end()
 
@@ -66,3 +66,22 @@ set belloff=all
 	let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 	
 	let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " exclude files in .gitignore
+
+" Coc Settings
+	inoremap <silent><expr> <TAB>
+		\ pumvisible() ? coc#_select_confirm() :
+		\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ coc#refresh()
+
+	function! s:check_back_space() abort
+		let col = col('.') - 1
+		return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
+	
+	let g:coc_snippet_next = '<tab>'
+
+	inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+	command! -nargs=0 Prettier :CocCommand prettier.formatFile

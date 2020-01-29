@@ -8,17 +8,9 @@ echo 'Running apt upgrade...'
 sudo apt upgrade -y
 echo 'System updated.'
 
-# Check if stow is installed
-if command -v stow >/dev/null 2>&1; then
-	echo 'Skipping: Stow already installed.'
-else
-	echo 'Installing stow...'
-	sudo apt install stow -y >/dev/null 2>&1
-	echo 'Finished: Installing stow'
-fi
-
-echo 'Installing misc programs'
-sudo apt install -y neofetch
+echo 'Installing programs'
+sudo apt install -y zsh curl software-properties-common apt-transport-https wget ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip stow uuid-runtime dconf-cli tmux htop
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install patched powerline font
 if [ -f /usr/share/fonts/opentype/PowerlineSymbols.otf ] && [ -f /etc/fonts/conf.avail/10-powerline-symbols.conf ]; then
@@ -30,7 +22,6 @@ else
 fi
 
 # Install neovim v0.4.3 from source
-sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 mkdir $HOME/temp
 cd $HOME/temp
 wget https://github.com/neovim/neovim/archive/v0.4.3.zip
@@ -41,24 +32,6 @@ sudo make install
 cd $HOME
 rm -rf $HOME/temp
 
-# Install Gogh (gnome-terminal theme) dependencies
-# Gogh github https://github.com/Mayccoll/Gogh
-# Gruvbox Dark = option 58
-if dpkg -s dconf-cli >/dev/null 2>&1; then
-	echo 'Skipping: dconf-cli is already installed.'
-else
-	echo 'Installing dconf-cli...'
-	sudo apt install dconf-cli >/dev/null 2>&1
-	echo 'Installed: dconf-cli.'
-fi
-
-if dpkg -s uuid-runtime >/dev/null 2>&1; then
-	echo 'Skipping: uuid-runtime is already installed.'
-else
-	echo 'Installing uuid-runtime...'
-	sudo apt install uuid-runtime -y >/dev/null 2>&1
-	echo 'Installed: uuid-runtime.'
-fi
 
 # Install tmux plugin manager
 if ! [ -d $HOME/.tmux/plugins/tpm ]; then
@@ -66,6 +39,12 @@ if ! [ -d $HOME/.tmux/plugins/tpm ]; then
 fi
 
 # Install NerdFonts
+
+# Install VS Code
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
 
 # Give instructions for manual install steps
 echo ''
@@ -75,7 +54,7 @@ echo ''
 echo ''
 echo '1. Open vim and install Coc extensions.'
 echo ''
-echo ':CocInstall coc-json coc-html coc-css coc-tsserver coc-vetur coc-yaml coc-emmet'
+echo ':CocInstall coc-json coc-html coc-css coc-tsserver coc-vetur coc-yaml coc-emmet coc-phpls coc-highlight coc-git coc-prettier'
 echo ''
 echo ''
 echo '2. Install NerdFonts for vim devicons'
