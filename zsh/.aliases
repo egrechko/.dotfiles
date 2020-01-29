@@ -1,7 +1,7 @@
 # Alias file for both Bash & ZSH
 
-# use Windows Vagrant for Trellis
-alias vagrant="vagrant.exe"
+# use Windows Vagrant for Trellis (uncomment in WSL)
+#alias vagrant="vagrant.exe"
 
 # Vim to Neovim
 alias vi="nvim"
@@ -23,6 +23,6 @@ alias gc="git commit"
 alias gcm="git commit -m"
 alias gp="git push"
 
-# Android Development settings
-alias adb="adb.exe"
-alias emulator="emulator.exe"
+# Android Development settings (uncomment in WSL)
+#alias adb="adb.exe"
+#alias emulator="emulator.exe"
