@@ -65,3 +65,5 @@ fi
 if [ -r $HOME/.enves ]; then
     source $HOME/.enves
 fi
+
+autoload zmv
