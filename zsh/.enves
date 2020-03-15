@@ -1,6 +1,6 @@
 # Enviroment Variable file
 
-# Set DISPLAY for Windows X Server
+# Set DISPLAY for Windows X Server (uncomment in WSL)
 #export DISPLAY=localhost:0
 
 # Set Default Editor
@@ -28,4 +28,10 @@ fi
 # Global Pip Packages
 if [ -d $HOME/.local/bin ]; then
     export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Start gnome-keyring
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
 fi
