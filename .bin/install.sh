@@ -68,5 +68,10 @@ echo ''
 echo 'run this command. Choose gruvbox. '
 echo 'bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 echo ''
+echo ''
+echo '4. Install npm packages'
+echo 'npm install -g serverless'
+
+
 
 # Finished. This script is still a work in progress like my dotfiles. 
