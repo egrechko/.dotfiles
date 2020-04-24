@@ -51,7 +51,7 @@ then
 fi
 
 # Change extension names to the extensions you need
-npm install coc-json coc-html coc-css coc-tsserver coc-vetur coc-yaml coc-emmet coc-phpls coc-highlight coc-git coc-snippets coc-markdownlint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-json coc-html coc-css coc-tsserver coc-vetur coc-yaml coc-emmet coc-phpls coc-highlight coc-git coc-snippets coc-markdownlint coc-prettier coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 # coc-prettier - maybe do coc-ale or something along those lines.
 
 echo ''

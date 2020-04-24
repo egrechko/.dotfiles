@@ -25,8 +25,8 @@ call plug#begin()
 	Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 "{{ Productivity 🔥 }}
 	Plug 'tomtom/tcomment_vim' " for creating comments
+	Plug 'dense-analysis/ale' " Lint for Javascript
 	"Plug 'godlygeek/tabular' " (READ	DOCUMENTATION)
-	"Plug 'w0rp/ale' " Lint for Javascript (READ	DOCUMENTATION)
 	"Plug 'tpope/vim-fugitive'
 	"Plug 'jiangmiao/auto-pairs'
 	"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
