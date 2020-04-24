@@ -38,6 +38,22 @@ fi
 # Install clipman, albert, picom, rofi, rofimoji if running xfce
 # Replace yay with either trizen or pacaur
 
+# Install Coc Extensions for vim
+set -o nounset    # error when referencing undefined variable
+set -o errexit    # exit when command fails
+
+# Install extensions
+mkdir -p ~/.config/coc/extensions
+cd ~/.config/coc/extensions
+if [ ! -f package.json ]
+then
+  echo '{"dependencies":{}}'> package.json
+fi
+
+# Change extension names to the extensions you need
+npm install coc-json coc-html coc-css coc-tsserver coc-vetur coc-yaml coc-emmet coc-phpls coc-highlight coc-git coc-snippets coc-markdownlint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+# coc-prettier - maybe do coc-ale or something along those lines.
+
 echo ''
 echo 'Post install checks.'
 echo ''
