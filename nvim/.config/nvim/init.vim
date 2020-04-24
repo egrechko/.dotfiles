@@ -8,8 +8,10 @@ call plug#begin()
 "{{ Syntax Highlighting & Colors 🎨 }}
 	Plug 'sheerun/vim-polyglot' " Syntax Highlighting for over 120 languages
 	"Plug 'flazz/vim-colorschemes'
+	"Plug 'posva/vim-vue' 	" Vue syntax highlighting
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'mhartington/oceanic-next'
+	Plug 'morhetz/gruvbox'
 	Plug 'frazrepo/vim-rainbow'
 	Plug 'reedes/vim-colors-pencil' " For markdown writing
 	Plug 'reedes/vim-pencil'
@@ -22,6 +24,7 @@ call plug#begin()
 	Plug 'ryanoasis/vim-devicons' " Icons in nerdtree
 	Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 "{{ Productivity 🔥 }}
+	Plug 'tomtom/tcomment_vim' " for creating comments
 	"Plug 'godlygeek/tabular' " (READ	DOCUMENTATION)
 	"Plug 'w0rp/ale' " Lint for Javascript (READ	DOCUMENTATION)
 	"Plug 'tpope/vim-fugitive'
