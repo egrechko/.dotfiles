@@ -1,6 +1,8 @@
 " Colorscheme
 setlocal background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
+"colorscheme molokai
+colorscheme OceanicNext
 
 " Tab settings
 setlocal autoindent

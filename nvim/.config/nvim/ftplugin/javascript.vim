@@ -1,6 +1,7 @@
 " Colorscheme
 setlocal background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme OceanicNext
 
 " Setting for Indenting Files
 setlocal autoindent

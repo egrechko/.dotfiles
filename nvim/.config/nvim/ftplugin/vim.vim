@@ -1,6 +1,10 @@
 " Colorscheme
-setlocal background=dark
-colorscheme gruvbox
+"setlocal background=dark
+"colorscheme gruvbox
+syntax enable
+colorscheme OceanicNext
+"colorscheme nord
+"let g:lightline = { 'colorscheme': 'OceanicNext', } 	" Change the colorscheme for lightline
 
 " Setting for Indenting Files
 setlocal autoindent
