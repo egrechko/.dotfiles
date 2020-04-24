@@ -1,6 +1,7 @@
 " Colorscheme
 setlocal background=dark
-colorscheme gruvbox
+colorscheme OceanicNext
+"colorscheme gruvbox
 
 " Emmet Settings
 "EmmetInstall
