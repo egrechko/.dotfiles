@@ -75,7 +75,7 @@ set belloff=all
 	colorscheme OceanicNext
 	
 	let g:rainbow_active = 1 						" have multiple colored pairs for better readability
-	let g:lightline = { 'colorscheme': 'one', } 	" Change the colorscheme for lightline
+	" let g:lightline = { 'colorscheme': 'one', } 	" Change the colorscheme for lightline
 
 " Ctrl-P Plugin
 	let g:ctrlp_map = '<c-p>'

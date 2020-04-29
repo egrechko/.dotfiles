@@ -4,9 +4,8 @@ autocmd FileType vue syntax sync fromstart
 " Colorscheme
 syntax enable
 setlocal background=dark
-"colorscheme gruvbox
-"colorscheme molokai
 colorscheme OceanicNext
+"colorscheme gruvbox
 
 " Tab settings
 setlocal autoindent
