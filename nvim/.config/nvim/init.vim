@@ -26,6 +26,7 @@ call plug#begin()
 "{{ Productivity 🔥 }}
 	Plug 'tomtom/tcomment_vim' " for creating comments
 	Plug 'dense-analysis/ale' " Lint for Javascript
+	Plug 'nathanaelkane/vim-indent-guides' " <Leader>ig is the hot key to enable indent guides
 	"Plug 'godlygeek/tabular' " (READ	DOCUMENTATION)
 	"Plug 'tpope/vim-fugitive'
 	"Plug 'jiangmiao/auto-pairs'
