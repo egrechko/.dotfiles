@@ -23,6 +23,12 @@ alias gc="git commit"
 alias gcm="git commit -m"
 alias gp="git push"
 
+# Tmux Aliases
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
+
 # Android Development settings (uncomment in WSL)
 #alias adb="adb.exe"
 #alias emulator="emulator.exe"
