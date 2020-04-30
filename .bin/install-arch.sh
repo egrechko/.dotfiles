@@ -19,7 +19,7 @@ sudo pacman -S stow yay neofetch lolcat libreoffice-still cmake zsh code zsh-com
 echo ''
 echo 'Installing packages...'
 echo ''
-yay -S mongodb-bin mongodb-compass-community-bin mongodb-tools-bin google-chrome typora mailspring
+yay -S mongodb-bin mongodb-compass-community-bin mongodb-tools-bin google-chrome typora mailspring virtualbox-ext-oracle
 
 # Install tmux plugin manager
 echo ''
