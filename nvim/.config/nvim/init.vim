@@ -80,10 +80,10 @@ set belloff=all
 	let g:rainbow_active = 1 						" have multiple colored pairs for better readability
 	" let g:lightline = { 'colorscheme': 'one', } 	" Change the colorscheme for lightline
 
-	" Fzf fuzzy file finder settings
-	"silent! nmap <C-p> :Files<CR>
-	silent! nnoremap <expr> <C-f> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
-	silent! nmap <C-p> :History<CR>
+"{{ fzf fuzzy file finder }}
+		"silent! nmap <C-p> :Files<CR>
+		silent! nnoremap <expr> <C-f> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+		silent! nmap <C-p> :History<CR>
 
 "{{ Status Line }}
 	" enable tabline
