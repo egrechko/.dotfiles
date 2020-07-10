@@ -68,14 +68,27 @@ silent! nmap <C-b> :NERDTreeToggle<CR>
 set belloff=all
 
 "{{ Colorscheme }}
+	"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	setlocal nu rnu
-
-	if (has("termguicolors"))
-		set termguicolors
-	endif
 
 	syntax enable
 	colorscheme OceanicNext
+
+	if $TERM =~ '^\(rxvt\|screen\|interix\|putty\)\(-.*\)\?$'
+        set notermguicolors
+    elseif $TERM =~ '^\(tmux\|iterm\|vte\|gnome\)\(-.*\)\?$'
+        set termguicolors
+    elseif $TERM =~ '^\(xterm\)\(-.*\)\?$'
+        if $XTERM_VERSION != ''
+            set termguicolors
+        elseif $KONSOLE_PROFILE_NAME != ''
+            set termguicolors
+        elseif $VTE_VERSION != ''
+            set termguicolors
+        else
+            set notermguicolors
+        endif
+	endif
 	
 	let g:rainbow_active = 1 						" have multiple colored pairs for better readability
 	" let g:lightline = { 'colorscheme': 'one', } 	" Change the colorscheme for lightline
