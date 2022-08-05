@@ -9,7 +9,7 @@ call plug#begin()
 	Plug 'jwalton512/vim-blade'
 	"Plug 'flazz/vim-colorschemes'
 	"Plug 'posva/vim-vue' 	" Vue syntax highlighting
-	Plug 'arcticicestudio/nord-vim'
+	" Plug 'arcticicestudio/nord-vim'
 	Plug 'mhartington/oceanic-next'
 	Plug 'morhetz/gruvbox'
 	Plug 'frazrepo/vim-rainbow'
@@ -24,6 +24,7 @@ call plug#begin()
 	Plug 'ryanoasis/vim-devicons' " Icons in nerdtree
 	"Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 	Plug 'junegunn/fzf.vim' " Fast Fuzzy file finder
+	Plug 'vimwiki/vimwiki' "vim wiki for notes
 "{{ Productivity 🔥 }}
 	Plug 'tomtom/tcomment_vim' " for creating comments
 	Plug 'dense-analysis/ale' " Lint for Javascript
@@ -169,3 +170,8 @@ set belloff=all
                                            \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 	command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+	" Vim Wiki Settings
+	" change where your wiki is located
+	" let g:vimwiki_list = [{'path': '/home/e/TresoritDrive/vimwiki/',
+	" 'syntax': 'markdown', 'ext': '.md'}]
