@@ -71,6 +71,8 @@ set belloff=all
 "{{ Colorscheme }}
 	"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	setlocal nu rnu
+	set nohlsearch
+	set guicursor
 
 	syntax enable
 	colorscheme OceanicNext
@@ -171,7 +173,6 @@ set belloff=all
 
 	command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-	" Vim Wiki Settings
+""" Vim Wiki Settings
 	" change where your wiki is located
-	" let g:vimwiki_list = [{'path': '/home/e/TresoritDrive/vimwiki/',
-	" 'syntax': 'markdown', 'ext': '.md'}]
+	let g:vimwiki_list = [{'path': '/home/e/TresoritDrive/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
