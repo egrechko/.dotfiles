@@ -176,3 +176,7 @@ set belloff=all
 """ Vim Wiki Settings
 	" change where your wiki is located
 	let g:vimwiki_list = [{'path': '/home/e/TresoritDrive/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+""" Hide annoying COC popup
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
