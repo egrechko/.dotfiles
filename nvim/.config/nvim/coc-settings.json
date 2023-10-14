@@ -1,8 +1,0 @@
-{
-	"suggest.noselect": false,
-	"emmet.includeLanguages": {
-		"vue": "html",
-		"vue-html": "html",
-		"javascript": "html"
-	}
-}

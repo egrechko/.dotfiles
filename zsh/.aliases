@@ -7,6 +7,10 @@
 alias vi="nvim"
 alias vim="nvim"
 
+# Emacs
+alias enw="emacs -nw"
+alias e="emacs"
+
 # ls aliases
 alias ls="exa --header -l"
 alias l="exa --header -l"
