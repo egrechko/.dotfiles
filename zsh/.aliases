@@ -33,6 +33,12 @@ alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
 
+# Noise generator
+alias play_whitenoise="soxnoise -c white"
+alias play_pink="soxnoise -c pink"
+alias play_brown="soxnoise -c brown"
+alias play_noise="soxnoise -c pinkbrown"
+
 # Android Development settings (uncomment in WSL)
 #alias adb="adb.exe"
 #alias emulator="emulator.exe"

@@ -4,10 +4,13 @@
 #export DISPLAY=localhost:0
 
 # Set Default Editor
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Set language
 export LANG=en_US.UTF-8
+
+# Set Mangohud for all Vulkan games
+export MANGOHUD=1
 
 ##################
 # PATH Variables #
@@ -35,8 +38,13 @@ if [ -d $HOME/.emacs.d/bin ]; then
     export PATH="$HOME/.emacs.d/bin:$PATH"
 fi
 
-# Start gnome-keyring
-if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
+# add cargo packages to path
+if [ -d $HOME/.cargo/bin ]; then
+    #export PATH="$HOME/.cargo/bin:$PATH"
+    source $HOME/.cargo/env
 fi
+# Start gnome-keyring
+#if [ -n "$DESKTOP_SESSION" ];then
+#    eval $(gnome-keyring-daemon --start)
+#    export SSH_AUTH_SOCK
+#fi
