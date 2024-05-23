@@ -7,6 +7,8 @@ setlocal shiftwidth=4
 setlocal spell
 setlocal wrap
 setlocal nonumber
+colorscheme pencil
+setlocal background=dark
 
 " use yaml syntax at the start of Jekyll markdown.
 "let g:vim_markdown_frontmatter=1
