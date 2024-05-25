@@ -1,10 +1,14 @@
 local lsp = require('lsp-zero').preset({"recommened"})
 
-lsp.ensure_installed({
-	'eslint',
-	'lua_ls',
-	'rust_analyzer',
-})
+-- might not need mason since i'll be installing language servers in the OS
+--require('mason').setup({})
+--require('mason-lspconfig').setup({
+--    ensure_installed = {
+--	    'eslint',
+--	    'lua_ls',
+--	    'rust_analyzer',
+--    }
+--})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -19,13 +23,10 @@ lsp.set_preferences({
 	sign_icons = { }
 })
 
-lsp.setup_nvim_cmp({
-	mapping = cmp_mappings
-})
-
---lsp.on_attach(function(client, bufnr)
---  lsp.default_keymaps({buffer = bufnr})
---end)
+-- TODO: Not working need to fix!
+--lsp.setup_nvim_cmp({
+--	mapping = cmp_mappings
+--})
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
