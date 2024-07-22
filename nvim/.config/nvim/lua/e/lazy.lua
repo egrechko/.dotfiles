@@ -19,7 +19,36 @@ require("lazy").setup({
     },
     -- color scheme
     {
-        'rose-pine/neovim', name = 'rose-pine'
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        "EdenEast/nightfox.nvim"
+    },
+    {
+        "catppuccin/nvim", 
+        name = "catppuccin", 
+        priority = 1000,
+--        config = function()
+--            require("catppuccin").setup({
+--                integrations = {
+--                    treesitter = true,
+--                }
+--            }),
+    },
+    { 'rose-pine/neovim', name = 'rose-pine' },
+    {
+        'projekt0n/github-nvim-theme',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+          require('github-theme').setup({
+            -- ...
+          })
+          --vim.cmd('colorscheme github_light_default')
+        end,
     },
     -- parser for better syntax highlighting
     {
