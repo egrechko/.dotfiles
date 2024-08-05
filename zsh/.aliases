@@ -39,6 +39,9 @@ alias play_pink="soxnoise -c pink"
 alias play_brown="soxnoise -c brown"
 alias play_noise="soxnoise -c pinkbrown"
 
+# tresorit-cli aliases
+alias tcli="tresorit-cli"
+
 # Android Development settings (uncomment in WSL)
 #alias adb="adb.exe"
 #alias emulator="emulator.exe"

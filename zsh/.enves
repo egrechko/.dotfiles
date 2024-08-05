@@ -43,8 +43,24 @@ if [ -d $HOME/.cargo/bin ]; then
     #export PATH="$HOME/.cargo/bin:$PATH"
     source $HOME/.cargo/env
 fi
+
+# add tresorit to path
+if [ -d $HOME/.local/share/tresorit ]; then
+    export PATH="$HOME/.local/share/tresorit:$PATH"
+fi
+
+# use nvim or most as pager for man pages
+export MANPAGER="nvim +Man!"
+
 # Start gnome-keyring
 #if [ -n "$DESKTOP_SESSION" ];then
 #    eval $(gnome-keyring-daemon --start)
 #    export SSH_AUTH_SOCK
 #fi
+
+# set Kvantum as theme engine for all QT apps
+#export QT_QPA_PLATFORM=wayland
+#export QT_QPA_PLATFORMTHEME=qt5ct
+#export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+#export QT_AUTO_SCREEN_SCALE_FACTOR=1
+#export QT_STYLE_OVERRIDE=kvantum 
