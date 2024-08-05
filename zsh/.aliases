@@ -12,10 +12,10 @@ alias enw="emacs -nw"
 alias e="emacs"
 
 # ls aliases
-alias ls="exa --header -l"
-alias l="exa --header -l"
-alias ll="exa --header -l"
-alias la="exa --header -la"
+alias ls="eza --header -l"
+alias l="eza --header -l"
+alias ll="eza --header -l"
+alias la="eza --header -la"
 
 # Reload ZSH config
 alias reload="source $HOME/.zshrc"
