@@ -1,6 +1,7 @@
 -- This file is used to configure language servers I have installed locally on my machine. I am not using mason to install language servers.
 
 -- Rust Analyzer LSP Support
+-- Required: rust-analyzer
 require('lspconfig').rust_analyzer.setup {
   -- Other Configs ...
   settings = {
@@ -20,6 +21,7 @@ require('lspconfig').rust_analyzer.setup {
 }
 
 -- Lua LSP Support
+-- Required: lua-language-server
 -- Future reference: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 require('lspconfig').lua_ls.setup {
 	on_init = function(client)
@@ -54,9 +56,11 @@ require('lspconfig').lua_ls.setup {
 }
 
 -- Bash LSP Support lol
+-- Required: bash-language-server
 require('lspconfig').bashls.setup{}
 
 -- Javascript LSP Support
+-- Required: vscode-lang-servers-extracted
 -- not attaching to .js buffers
 -- need to create a eslint.config.js or .eslintrc file in the root of a JS project
 require('lspconfig').eslint.setup {
@@ -67,3 +71,7 @@ require('lspconfig').eslint.setup {
       })
     end,
 }
+
+-- Dockerfile LSP Support
+-- Required: docker-langserver
+require("lspconfig").dockerls.setup {}
