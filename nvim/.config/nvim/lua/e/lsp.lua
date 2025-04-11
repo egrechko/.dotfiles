@@ -1,4 +1,5 @@
 -- This file is used to configure language servers I have installed locally on my machine. I am not using mason to install language servers.
+-- Future reference: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 -- Rust Analyzer LSP Support
 -- Required: rust-analyzer
@@ -20,9 +21,11 @@ require('lspconfig').rust_analyzer.setup {
   }
 }
 
+-- Python LSP Support
+require'lspconfig'.pylsp.setup{}
+
 -- Lua LSP Support
 -- Required: lua-language-server
--- Future reference: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 require('lspconfig').lua_ls.setup {
 	on_init = function(client)
 	    local path = client.workspace_folders[1].name
