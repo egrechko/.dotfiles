@@ -17,8 +17,9 @@ _darcs
 
 \.DS_Store
 
-\README.md*
+# feels kinda useless here
+#\README.*
 
-^/README.md*
+^/README.*
 ^/LICENSE.*
 ^/COPYING
