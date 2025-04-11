@@ -1,0 +1,42 @@
+# AUTORUN
+#
+
+exec_always "autotiling"
+
+# import systemd env vars from ~/.config/environment.d/. Ideally that is.
+exec_always "systemctl --user import-environment"
+exec "dbus-update-activation-environment --systemd --all"
+
+# authentication agent
+exec "/usr/lib/polkit-kde-authentication-agent-1"
+
+# load up launcher
+#exec "/usr/bin/ulauncher --hide-window 1"
+
+# Notifications
+exec "/usr/bin/dunst"
+
+# Network management system tray
+exec "/usr/bin/nm-applet"
+
+# Bluetooth system tray
+# blueman has a bunch of issues for me. Disabling for now.
+#exec "/usr/bin/blueman-applet"
+
+# clipboard manager
+exec "/usr/bin/copyq"
+
+# XDG desktop portal
+exec "--no-startup-id /usr/lib/xdg-desktop-portal -r"
+
+# Corectrl GPU management
+#exec "/usr/bin/corectrl --minimize-systray"
+
+# Start tresorit sync daemon
+#exec "/home/e/.local/share/tresorit/tresorit-cli start"
+
+# kwallet for signal and shit
+exec "/usr/bin/kwalletd6"
+
+# Startup programs that are run on login and put into their correct workspaces
+exec "/home/e/.config/sway/scripts/startup"

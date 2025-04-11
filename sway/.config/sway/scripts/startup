@@ -1,0 +1,17 @@
+#!/bin/bash
+# https://gitlab.com/wef/dotfiles/-/blob/master/bin/i3-toolwait
+# www.reddit.com/r/swaywm/comments/ru3rn9/a_feeble_version_of_toolwait_to_start_a_session/
+
+#CMD="/home/e/.config/sway/scripts/sway-toolwait"
+
+#swaymsg "workspace number 1"
+#$CMD kitty --waitfor kitty
+#
+#swaymsg "workspace number 8"
+#$CMD --nocheck --waitfor webcord webcord
+#
+#swaymsg "workspace number 3"
+#$CMD --nocheck --waitfor zen-browser zen-browser
+
+#swaymsg "workspace number 5"
+#$CMD --nocheck --waitfor steam steam
